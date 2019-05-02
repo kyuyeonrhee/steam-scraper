@@ -17,7 +17,7 @@ requirements를 설치
 ```
 pip install -r requirements.txt
 ```
->> 텍스트 파일안에 들어있는 프로그램을 다운받으라는 표시로 -r flag를 붙여줌
+>> 텍스트 파일안에 들어있는 프로그램을 다운받으라는 표시로 -r flag를 붙여줌 <br>
 >> 경로지정을 해야 하므로 -r 뒤에 drag and drop
 
 # 맥에서는 ...
@@ -36,10 +36,10 @@ scrapy crawl products -o output/products_all.jl --logfile=output/products_all.lo
 ```
 
 참고로,
->> scrapy crawl command는 cfg 파일이 있는 곳에서 가능하다. scrapy.cfg 파일이 들어있는 steam-scraper-master 파일에서 실행하자.
->> scrapy crawl 하면 쓸 수 있는 다양한 scrapy command들을 볼 수 있다
->> -o 에서는 output파일을 'output' 이라고 지정해두었으므로 디렉토리에 output이라는 파일을 만들어놓자
->> 실행하기전에 ProductSpider 파일을 손보자.
+>> scrapy crawl command는 cfg 파일이 있는 곳에서 가능하다. scrapy.cfg 파일이 들어있는 steam-scraper-master 파일에서 실행하자.<br>
+>> scrapy crawl 하면 쓸 수 있는 다양한 scrapy command들을 볼 수 있다.<br>
+>> -o 에서는 output파일을 'output' 이라고 지정해두었으므로 디렉토리에 output이라는 파일을 만들어놓자.<br>
+>> 실행하기전에 ProductSpider 파일을 손보자.<br>
 
 완료된 후에는 products_all.jl 이라는 파일이 아웃풋으로 나온다.
 
