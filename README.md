@@ -1,34 +1,26 @@
 # Steam Scraper
 
-This repository contains [Scrapy](https://github.com/scrapy/scrapy) spiders for **crawling products** and **scraping all user-submitted reviews** from the [Steam game store](https://steampowered.com).
-A few scripts for more easily managing and deploying the spiders are included as well.
-
-This repository contains code accompanying the *Scraping the Steam Game Store* article published on the [Scrapinghub blog](https://blog.scrapinghub.com/2017/07/07/scraping-the-steam-game-store-with-scrapy/) and the [Intoli blog](https://intoli.com/blog/steam-scraper/).
 
 ## Installation
-
-After cloning the repository with
-```bash
-git clone git@github.com:prncc/steam-scraper.git
+다운로드 후
+cmd 연 다음에 
 ```
-start and activate a Python 3.6+ virtualenv with
-cmd 연 후 cd steam-scraper-master
-그 다음에 가상환경
+cd steam-scraper-master
+```
+
+그리고 파이썬 가상환경을 열자
 ```
 virtualenv -p python 3.7
 ```
-```bash
-cd steam-scraper
-# virtualenv -p python3.6 env
-# . env/bin/activate
+
+requirements를 설치
 ```
-Install Python requirements via:
-```bash
 pip install -r requirements.txt
 ```
 >> 텍스트 파일안에 들어있는 프로그램을 다운받으라는 표시로 -r flag를 붙여줌
 >> 경로지정을 해야 하므로 -r 뒤에 drag and drop
 
+# 맥에서는 ...
 By the way, on macOS you can install Python 3.6 via [homebrew](https://brew.sh):
  ```bash
  brew install python3
@@ -36,18 +28,21 @@ By the way, on macOS you can install Python 3.6 via [homebrew](https://brew.sh):
 
 ## Crawling the Products
 
-The purpose of `ProductSpider` is to discover product pages on the [Steam product listing](http://store.steampowered.com/search/?sort_by=Released_DESC) and extract useful metadata from them.
-A neat feature of this spider is that it automatically navigates through Steam's age verification checkpoints.
-You can initiate the multi-hour crawl with
+Steam product listing 에 나열되어 있는 product pages들을 긁어오고 이에 대한 metadata를 정리하기 위해서 쓰는 spider.
+시간이 꽤 걸린다.
+cmd 창을 연 후
 ```bash
 scrapy crawl products -o output/products_all.jl --logfile=output/products_all.log --loglevel=INFO -s JOBDIR=output/products_all_job -s HTTPCACHE_ENABLED=False
 ```
+
+참고로,
 >> scrapy crawl command는 cfg 파일이 있는 곳에서 가능하다. scrapy.cfg 파일이 들어있는 steam-scraper-master 파일에서 실행하자.
 >> scrapy crawl 하면 쓸 수 있는 다양한 scrapy command들을 볼 수 있다
 >> -o 에서는 output파일을 'output' 이라고 지정해두었으므로 디렉토리에 output이라는 파일을 만들어놓자
 >> 실행하기전에 ProductSpider 파일을 손보자.
 
-When it completes you should have metadata for all games on Steam in `output/products_all.jl`.
+완료된 후에는 products_all.jl 이라는 파일이 아웃풋으로 나온다.
+
 Here's some example output:
 ```python
 {
