@@ -20,7 +20,7 @@ pip install -r requirements.txt
 >> 텍스트 파일안에 들어있는 프로그램을 다운받으라는 표시로 -r flag를 붙여줌 <br>
 >> 경로지정을 해야 하므로 -r 뒤에 drag and drop<br>
 
-# 맥에서는 ...
+#### 맥에서는 ...
 By the way, on macOS you can install Python 3.6 via [homebrew](https://brew.sh):
  ```bash
  brew install python3
