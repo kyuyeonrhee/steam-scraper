@@ -26,6 +26,8 @@ Install Python requirements via:
 ```bash
 pip install -r requirements.txt
 ```
+>> 텍스트 파일안에 들어있는 프로그램을 다운받으라는 표시로 -r flag를 붙여줌
+>> 경로지정을 해야 하므로 -r 뒤에 drag and drop
 
 By the way, on macOS you can install Python 3.6 via [homebrew](https://brew.sh):
  ```bash
