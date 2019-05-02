@@ -18,7 +18,7 @@ requirements를 설치
 pip install -r requirements.txt
 ```
 >> 텍스트 파일안에 들어있는 프로그램을 다운받으라는 표시로 -r flag를 붙여줌 <br>
->> 경로지정을 해야 하므로 -r 뒤에 drag and drop
+>> 경로지정을 해야 하므로 -r 뒤에 drag and drop<br>
 
 # 맥에서는 ...
 By the way, on macOS you can install Python 3.6 via [homebrew](https://brew.sh):
@@ -28,8 +28,8 @@ By the way, on macOS you can install Python 3.6 via [homebrew](https://brew.sh):
 
 ## Crawling the Products
 
-Steam product listing 에 나열되어 있는 product pages들을 긁어오고 이에 대한 metadata를 정리하기 위해서 쓰는 spider.
-시간이 꽤 걸린다.
+Steam product listing 에 나열되어 있는 product pages들을 긁어오고 이에 대한 metadata를 정리하기 위해서 쓰는 spider.<br>
+시간이 꽤 걸린다.<br>
 cmd 창을 연 후
 ```bash
 scrapy crawl products -o output/products_all.jl --logfile=output/products_all.log --loglevel=INFO -s JOBDIR=output/products_all_job -s HTTPCACHE_ENABLED=False
@@ -41,7 +41,7 @@ scrapy crawl products -o output/products_all.jl --logfile=output/products_all.lo
 >> -o 에서는 output파일을 'output' 이라고 지정해두었으므로 디렉토리에 output이라는 파일을 만들어놓자.<br>
 >> 실행하기전에 ProductSpider 파일을 손보자.<br>
 
-완료된 후에는 products_all.jl 이라는 파일이 아웃풋으로 나온다.
+완료된 후에는 products_all.jl 이라는 파일이 아웃풋으로 나온다.<br>
 
 Here's some example output:
 ```python
