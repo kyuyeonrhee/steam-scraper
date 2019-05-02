@@ -33,7 +33,6 @@ By the way, on macOS you can install Python 3.6 via [homebrew](https://brew.sh):
  ```bash
  brew install python3
 ```
-On Ubuntu you can use [instructions posted on askubuntu.com](https://askubuntu.com/questions/865554/how-do-i-install-python-3-6-using-apt-get).
 
 ## Crawling the Products
 
