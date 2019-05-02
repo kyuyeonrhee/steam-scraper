@@ -12,10 +12,15 @@ After cloning the repository with
 git clone git@github.com:prncc/steam-scraper.git
 ```
 start and activate a Python 3.6+ virtualenv with
+cmd 연 후 cd steam-scraper-master
+그 다음에 가상환경
+```
+virtualenv -p python 3.7
+```
 ```bash
 cd steam-scraper
-virtualenv -p python3.6 env
-. env/bin/activate
+# virtualenv -p python3.6 env
+# . env/bin/activate
 ```
 Install Python requirements via:
 ```bash
