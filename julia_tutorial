@@ -1,0 +1,44 @@
+# Julia
+
+Julia 실행 후
+
+```
+virtualenv -p python 3.7
+```
+
+requirements를 설치
+```
+pip install -r requirements.txt
+```
+>> 텍스트 파일안에 들어있는 프로그램을 다운받으라는 표시로 -r flag를 붙여줌 <br>
+>> 경로지정을 해야 하므로 -r 뒤에 drag and drop<br>
+
+### Adding Julia to Jupyter Notebook
+
+ ```bash
+using Pkg
+Pkg.add("Julia")
+```
+
+### Handling files with Julia
+> Open file
+```
+f = open("products_all.jl")
+```
+
+> Or
+```
+open("products_all.jl") do file
+    # do stuff with the open file
+end
+```
+- So at the end, <br>
+- Assuming that JSON package is installed (julia> Pkg.add("JSON")<br>
+- We'll convert the Julia file to JSON format
+```
+import JSON
+f = open("products_all.jl")
+open("products_all.json", "w") do file
+    write(file, f)
+end
+```
