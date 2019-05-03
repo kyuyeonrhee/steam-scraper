@@ -200,18 +200,6 @@ The output is a bit messy, but it's a quick and easy way to run this job.
 
 ## Julia Tutorial
 
-Julia 실행 후
-
-```
-virtualenv -p python 3.7
-```
-
-requirements를 설치
-```
-pip install -r requirements.txt
-```
->> 텍스트 파일안에 들어있는 프로그램을 다운받으라는 표시로 -r flag를 붙여줌 <br>
->> 경로지정을 해야 하므로 -r 뒤에 drag and drop<br>
 
 ### Adding Julia to Jupyter Notebook
 
