@@ -68,26 +68,13 @@ Here's some example output:
 ## Extracting the Reviews
 
 The purpose of `ReviewSpider` is to scrape all user-submitted reviews of a particular product from the [Steam community portal](http://steamcommunity.com/). 
-By default, it starts from URLs listed in its `test_urls` parameter:
-```python
-class ReviewSpider(scrapy.Spider):
-    name = 'reviews'
-    test_urls = [
-        "http://steamcommunity.com/app/316790/reviews/?browsefilter=mostrecent&p=1",  # Grim Fandango
-        "http://steamcommunity.com/app/207610/reviews/?browsefilter=mostrecent&p=1",  # The Walking Dead
-        "http://steamcommunity.com/app/414700/reviews/?browsefilter=mostrecent&p=1"   # Outlast 2
-    ]
-```
-It can alternatively ingest a text file containing URLs such as
-```
-http://steamcommunity.com/app/316790/reviews/?browsefilter=mostrecent&p=1
-http://steamcommunity.com/app/207610/reviews/?browsefilter=mostrecent&p=1
-http://steamcommunity.com/app/414700/reviews/?browsefilter=mostrecent&p=1
-```
-via the `url_file` command line argument:
+
+url이 든 텍스트 파일 (ex. url_file.txt) 생성 후 경로 지정 :
+
 ```bash
 scrapy crawl reviews -o reviews.jl -a url_file=url_file.txt -s JOBDIR=output/reviews
 ```
+
 An output sample:
 ```python
 {
@@ -108,7 +95,7 @@ An output sample:
 }
 ```
 
-If you want to get all the reviews for all products, `split_review_urls.py` will remove duplicate entries from `products_all.jl` and shuffle `review_url`s into several text files.
+If you want to get all the reviews for all products, `split_review_urls.py` will remove duplicate entries from `products_all.jl` and shuffle `review_url`s into several text files. -> products spider로 더이상 # of reviews가 긁히지 않음 (수정하기)
 This provides a convenient way to split up your crawl into manageable pieces.
 The whole job takes a few days with Steam's generous rate limits.
 
