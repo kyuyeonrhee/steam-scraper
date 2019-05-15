@@ -72,7 +72,7 @@ The purpose of `ReviewSpider` is to scrape all user-submitted reviews of a parti
 url이 든 텍스트 파일 (ex. edu_urls.txt) 생성 후 경로 지정 :
 
 ```bash
-scrapy crawl reviews -o reviews.jl -a url_file=edu_urls.txt -s JOBDIR=output/reviews
+scrapy crawl reviews -o reviews.jl -a url_file=edu_review_urls.txt -s JOBDIR=output/reviews
 ```
 
 An output sample:
