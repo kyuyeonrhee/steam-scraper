@@ -69,10 +69,10 @@ Here's some example output:
 
 The purpose of `ReviewSpider` is to scrape all user-submitted reviews of a particular product from the [Steam community portal](http://steamcommunity.com/). 
 
-url이 든 텍스트 파일 (ex. url_file.txt) 생성 후 경로 지정 :
+url이 든 텍스트 파일 (ex. edu_urls.txt) 생성 후 경로 지정 :
 
 ```bash
-scrapy crawl reviews -o reviews.jl -a url_file=url_file.txt -s JOBDIR=output/reviews
+scrapy crawl reviews -o reviews.jl -a url_file=edu_urls.txt -s JOBDIR=output/reviews
 ```
 
 An output sample:
